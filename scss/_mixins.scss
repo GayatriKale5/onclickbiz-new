@@ -1,0 +1,110 @@
+
+/*=======================================
+
+ *** MIXINS ***
+
+ =========================================*/
+
+
+ $font-first: 'Work Sans';
+ $font-second: 'sans-serif';
+
+ $color-white: #fff;
+ $color-blue: #34A8DD;
+ $color-black: #000;
+ $color-grey: #9A9899;
+ $color-section-bg: #fcfcfc;
+ $color-card-bg: #f9f9f9;
+
+ $color-facebook: #4867AA;
+ $color-twitter: #55ACEF;
+ $color-linkedin: #007BB6;
+ $color-google-plus: #DC4E42;
+
+ /*mixins*/
+ @mixin appearance($val) {
+ 	-webkit-appearance: $val;
+ 	-moz-appearance: $val;
+ 	appearance: $val;
+ }
+
+ @mixin transformRotate($transform) {
+ 	-moz-transform:    rotate($transform);
+ 	-o-transform:      rotate($transform);
+ 	-webkit-transform: rotate($transform);
+ 	-ms-transform:     rotate($transform);
+ 	transform:         rotate($transform);
+ }
+
+ @mixin transformScale($transform) {
+ 	-moz-transform:    scale($transform);
+ 	-o-transform:      scale($transform);
+ 	-webkit-transform: scale($transform);
+ 	-ms-transform:     scale($transform);
+ 	transform:         scale($transform);
+ }
+
+ @mixin transition($transition) {
+ 	-moz-transition:    all $transition ease;
+ 	-o-transition:      all $transition ease;
+ 	-webkit-transition: all $transition ease;
+ 	-ms-transition:     all $transition ease;
+ 	transition:         all $transition ease;
+ }
+
+ @mixin transitionEaseInOut($transition) {
+ 	-moz-transition:    all $transition ease-in-out;
+ 	-o-transition:      all $transition ease-in-out;
+ 	-webkit-transition: all $transition ease-in-out;
+ 	-ms-transition:     all $transition ease-in-out;
+ 	transition:         all $transition ease-in-out;
+ }
+
+ @mixin animationFadeIn($fadeIn) {
+ 	animation: fadeIn $fadeIn;
+ 	-webkit-animation: fadeIn $fadeIn;
+ 	-moz-animation: fadeIn $fadeIn;
+ 	-o-animation: fadeIn $fadeIn;
+ 	-ms-animation: fadeIn $fadeIn;
+ }
+
+ @mixin border-radius($radius) {
+ 	-webkit-border-radius: $radius;
+ 	-moz-border-radius: $radius;
+ 	-ms-border-radius: $radius;
+ 	border-radius: $radius;
+ }
+
+ @mixin flex() {
+ 	display: -webkit-box;      
+ 	display: -moz-box;         
+ 	display: -ms-flexbox;      
+ 	display: -webkit-flex;     
+ 	display: flex;             
+ }
+
+
+ @mixin box-shadow($val1, $val2, $val3, $val4, $color) {
+
+ 	-webkit-box-shadow:$val1 $val2 $val3 $val4 $color;
+ 	-moz-box-shadow:$val1 $val2 $val3 $val4 $color;
+ 	box-shadow:$val1 $val2 $val3 $val4 $color;
+ }
+
+
+ @mixin placeholder($val) {
+ 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 		color: $val !important;
+ 	}
+ 	:-moz-placeholder { /* Firefox 4 - 18 */
+ 		color: $val !important;
+ 		opacity: 1;
+ 	}
+ 	::-moz-placeholder { /* Firefox 19+ */
+ 		color: $val !important;
+ 		opacity: 1;
+ 	}
+ 	:-ms-input-placeholder { /* IE 10+ */
+ 		color: $val !important;
+ 	}
+ }
